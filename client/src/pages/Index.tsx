@@ -39,13 +39,18 @@ const Index = () => {
         <Layout>
             {/* Hero */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                <div
-                    className="absolute inset-0 transform scale-105"
-                    style={{ backgroundImage: "url('/images/hero-banner.png')", backgroundSize: "cover", backgroundPosition: "center top", backgroundAttachment: "fixed" }}
+                {/* Hero image as img tag for reliable rendering */}
+                <img
+                    src="/images/hero-banner.png"
+                    alt="Lady of Substance hero"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    style={{ objectPosition: "center 20%" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-black/40" />
+                {/* Soft overlay for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/45" />
+                {/* Hero text */}
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>THE LADY OF SUBSTANCE BOUTIQUE</p>
+                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>THE LADY OF SUBSTANCE BOUTIQUE</p>
                     <h1
                         className="font-heading text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-tight mb-10 fade-in-up fade-in-up-delay-1"
                         style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}
