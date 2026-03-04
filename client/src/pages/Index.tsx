@@ -11,7 +11,6 @@ const categoryData = [
     { name: "Necklaces", image: "/images/product-necklace.jpg" },
     { name: "Earrings", image: "/images/product-earrings.jpg" },
     { name: "Bracelets", image: "/images/product-bracelet.jpg" },
-    { name: "Watches", image: "/images/category-watches.png" },
     { name: "Bridal", image: "/images/category-bridal.png" }
 ];
 
@@ -80,7 +79,7 @@ const Index = () => {
                     <h2 className="font-heading text-3xl md:text-4xl">Shop by Category</h2>
                     <div className="luxury-divider mt-4" />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4 mt-12">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 mt-12">
                     {categoryData.map((cat, i) => (
                         <Link
                             key={cat.name}
@@ -152,19 +151,19 @@ const Index = () => {
                     </div>
 
                     {/* Asymmetrical Masonry/Lookbook Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 lg:gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 lg:gap-16 items-center">
                         {/* Image 1 */}
-                        <div className="aspect-[3/4] md:aspect-[2/3] overflow-hidden bg-secondary relative group md:-translate-y-12 lg:-translate-y-24">
+                        <div className="aspect-[4/5] overflow-hidden bg-secondary relative group md:-translate-y-8">
                             <img src="/images/lookbook-1.png" alt="Campaign Look 1" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
                             <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
                         </div>
                         {/* Image 2 */}
-                        <div className="aspect-square md:aspect-[4/5] overflow-hidden bg-secondary relative group mt-4 md:mt-24 lg:mt-32">
+                        <div className="aspect-[3/4] overflow-hidden bg-secondary relative group mt-4 md:mt-0 md:translate-y-12">
                             <img src="/images/lookbook-2.png" alt="Campaign Look 2" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
                             <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
                         </div>
                         {/* Image 3 */}
-                        <div className="aspect-[3/4] md:aspect-[2/3] overflow-hidden bg-secondary relative group mt-4 md:mt-0 md:translate-y-12 lg:translate-y-20">
+                        <div className="aspect-[4/5] overflow-hidden bg-secondary relative group mt-4 md:mt-0 md:-translate-y-8">
                             <img src="/images/lookbook-3.png" alt="Campaign Look 3" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
                             <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
                         </div>
