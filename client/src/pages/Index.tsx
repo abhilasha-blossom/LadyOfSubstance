@@ -31,25 +31,39 @@ const Index = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="relative h-[85vh] md:h-[90vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <div
-                    className="absolute inset-0 bg-cover bg-center"
+                    className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
                     style={{ backgroundImage: "url('/images/hero.jpg')" }}
                 />
-                <div className="absolute inset-0 bg-foreground/30" />
-                <div className="relative z-10 text-center px-4">
-                    <p className="luxury-subheading text-primary-foreground/80 mb-4 fade-in-up">LadyOfSubstance</p>
-                    <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-medium leading-tight mb-6 fade-in-up fade-in-up-delay-1">
-                        Jewelry for women<br />of substance.
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/30 to-transparent" />
+                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+                    <p className="luxury-subheading text-primary-foreground/90 mb-6 fade-in-up tracking-[0.3em]">THE LADY OF SUBSTANCE COLLECTION</p>
+                    <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground font-light leading-[1.1] mb-10 fade-in-up fade-in-up-delay-1 drop-shadow-lg">
+                        Jewelry for the woman <br /><span className="editorial-italic metallic-text">of substance.</span>
                     </h1>
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-2 bg-primary-foreground text-foreground px-8 py-3 text-xs tracking-[0.2em] uppercase font-body hover:opacity-90 transition-opacity fade-in-up fade-in-up-delay-2"
+                        className="inline-flex items-center gap-4 bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 text-primary-foreground px-10 py-4 text-xs tracking-[0.25em] uppercase font-body hover:bg-primary-foreground hover:text-foreground transition-all duration-500 fade-in-up fade-in-up-delay-2"
                     >
-                        Explore Collection <ArrowRight size={14} />
+                        Explore Collection <ArrowRight size={14} className="font-light" />
                     </Link>
                 </div>
             </section>
+
+            {/* Shimmering Marquee */}
+            <div className="marquee-container">
+                <div className="marquee-content luxury-subheading text-[10px] md:text-xs tracking-[0.3em] opacity-80">
+                    <span>✧ ETHICALLY SOURCED ✧</span>
+                    <span>BESPOKE CRAFTSMANSHIP ✧</span>
+                    <span>ETERNAL ELEGANCE ✧</span>
+                    <span>SOLID GOLD FOUNDATION ✧</span>
+                    <span>ETHICALLY SOURCED ✧</span>
+                    <span>BESPOKE CRAFTSMANSHIP ✧</span>
+                    <span>ETERNAL ELEGANCE ✧</span>
+                    <span>SOLID GOLD FOUNDATION ✧</span>
+                </div>
+            </div>
 
             {/* Categories */}
             <section className="luxury-container py-20 md:py-28">
@@ -58,14 +72,17 @@ const Index = () => {
                     <h2 className="font-heading text-3xl md:text-4xl">Shop by Category</h2>
                     <div className="luxury-divider mt-4" />
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    {categories.map((cat) => (
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4 mt-12">
+                    {categories.map((cat, i) => (
                         <Link
                             key={cat}
                             to="/shop"
-                            className="group relative bg-secondary aspect-square flex items-end p-4 overflow-hidden hover:shadow-md transition-shadow"
+                            className={`group relative bg-secondary flex items-end p-6 overflow-hidden hover:shadow-2xl transition-all duration-700 ${i % 2 === 0 ? 'aspect-[3/4] md:translate-y-8' : 'aspect-square'}`}
                         >
-                            <span className="font-heading text-sm md:text-base group-hover:text-primary transition-colors">{cat}</span>
+                            <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
+                            <span className="font-heading text-sm md:text-lg tracking-wider group-hover:text-primary transition-colors z-10">
+                                <span className={i % 2 !== 0 ? 'editorial-italic' : ''}>{cat}</span>
+                            </span>
                         </Link>
                     ))}
                 </div>
@@ -110,42 +127,48 @@ const Index = () => {
                 </div>
             </section>
 
-            {/* Brand Story */}
-            <section className="luxury-container py-20 md:py-28">
-                <div className="grid md:grid-cols-2 gap-12 items-center">
-                    <div className="aspect-[3/4] overflow-hidden">
-                        <img src="/images/about.jpg" alt="LadyOfSubstance brand story" className="w-full h-full object-cover" loading="lazy" />
-                    </div>
-                    <div className="max-w-md">
-                        <p className="luxury-subheading mb-3">Our Story</p>
-                        <h2 className="font-heading text-3xl md:text-4xl mb-6">Crafted for the woman who knows her worth.</h2>
-                        <p className="text-muted-foreground font-body leading-relaxed mb-6">
-                            LadyOfSubstance was born from the belief that jewelry should be more than decoration — it should be a declaration.
-                            Every piece is designed for women who lead with confidence, choose quality over quantity, and understand that
-                            true luxury is found in the details.
-                        </p>
-                        <Link to="/about" className="luxury-link luxury-subheading inline-flex items-center gap-2">
-                            Read More <ArrowRight size={12} />
-                        </Link>
+            {/* Brand Story (Deep Contrast) */}
+            <section className="bg-foreground text-primary-foreground py-24 md:py-32">
+                <div className="luxury-container">
+                    <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+                        <div className="max-w-xl order-2 md:order-1">
+                            <p className="luxury-subheading mb-4 opacity-70">Heritage & Vision</p>
+                            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.1] font-light">
+                                Crafted for the woman who <br /><span className="editorial-italic metallic-text">knows her worth.</span>
+                            </h2>
+                            <div className="h-[1px] w-24 bg-white/20 mb-8" />
+                            <p className="text-primary-foreground/60 font-body leading-relaxed mb-10 text-lg">
+                                LadyOfSubstance was born from the belief that jewelry should be more than decoration — it should be a declaration.
+                                Every piece is designed for women who lead with confidence, choose quality over quantity, and understand that
+                                true luxury is found in the details.
+                            </p>
+                            <Link to="/about" className="group inline-flex items-center gap-4 text-xs tracking-[0.25em] uppercase font-body hover:text-primary transition-colors">
+                                <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-500 group-hover:after:origin-bottom-left group-hover:after:scale-x-100 pb-1">Read The Full Story</span>
+                                <ArrowRight size={14} className="font-light group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                        </div>
+                        <div className="aspect-[3/4] overflow-hidden order-1 md:order-2">
+                            <img src="/images/about.jpg" alt="LadyOfSubstance brand story" className="w-full h-full object-cover hover:scale-[1.05] transition-transform duration-[2s] ease-out opacity-90" loading="lazy" />
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Newsletter */}
-            <section className="bg-foreground text-primary-foreground py-20 md:py-28">
-                <div className="luxury-container text-center max-w-xl mx-auto">
-                    <p className="luxury-subheading opacity-50 mb-3">Stay Connected</p>
-                    <h2 className="font-heading text-3xl md:text-4xl mb-4">Join Our Inner Circle</h2>
-                    <p className="text-sm opacity-70 font-body mb-8">
-                        Be the first to discover new collections, exclusive offers, and the stories behind each piece.
+            <section className="bg-secondary/20 py-24 md:py-32">
+                <div className="luxury-container text-center max-w-2xl mx-auto">
+                    <p className="luxury-subheading mb-4 text-primary">Exclusive Access</p>
+                    <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 font-light">Join The <span className="editorial-italic">Inner Circle</span></h2>
+                    <p className="text-muted-foreground font-body mb-12 text-lg">
+                        Be the first to discover new collections, receive private invitations, and uncover the stories behind each crafted piece.
                     </p>
-                    <div className="flex max-w-md mx-auto">
+                    <div className="flex flex-col sm:flex-row max-w-lg mx-auto gap-4 sm:gap-0">
                         <input
                             type="email"
-                            placeholder="Enter your email"
-                            className="flex-1 bg-transparent border border-primary-foreground/20 px-4 py-3 text-sm font-body placeholder:opacity-40 focus:outline-none focus:border-primary-foreground/50"
+                            placeholder="Email Address"
+                            className="flex-1 bg-transparent border-b border-border px-4 py-4 text-sm font-body focus:outline-none focus:border-primary transition-colors"
                         />
-                        <button className="bg-primary-foreground text-foreground px-6 py-3 text-xs font-body tracking-[0.15em] uppercase hover:opacity-90 transition-opacity">
+                        <button className="bg-foreground text-primary-foreground px-8 py-4 text-xs font-body tracking-[0.2em] uppercase hover:bg-primary transition-colors">
                             Subscribe
                         </button>
                     </div>

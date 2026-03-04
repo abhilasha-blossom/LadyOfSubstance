@@ -4,8 +4,10 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;   /* Cream */
-    --foreground: 20 10% 10%;   /* Dark Charcoal */
+    --background: 40 33% 98%;
+    /* Cream */
+    --foreground: 20 10% 10%;
+    /* Dark Charcoal */
 
     --card: 40 33% 98%;
     --card-foreground: 20 10% 10%;
@@ -13,10 +15,12 @@
     --popover: 40 33% 98%;
     --popover-foreground: 20 10% 10%;
 
-    --primary: 45 40% 50%;      /* Gold/Champagne */
+    --primary: 45 40% 50%;
+    /* Gold/Champagne */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 10% 90%;    /* Beige */
+    --secondary: 40 10% 90%;
+    /* Beige */
     --secondary-foreground: 20 10% 10%;
 
     --muted: 40 10% 90%;
@@ -70,6 +74,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -79,24 +84,63 @@
   .luxury-container {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+
   .luxury-subheading {
     @apply font-body text-xs tracking-[0.2em] uppercase text-muted-foreground;
   }
+
   .luxury-link {
     @apply relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:origin-bottom-left hover:after:scale-x-100;
   }
+
   .luxury-divider {
     @apply h-[1px] w-12 bg-primary/30 mx-auto;
   }
-  
+
   .fade-in-up {
     @apply opacity-0 translate-y-4 animate-[fadeInUp_0.8s_ease-out_forwards];
   }
+
   .fade-in-up-delay-1 {
     @apply animate-[fadeInUp_0.8s_ease-out_0.2s_forwards];
   }
+
   .fade-in-up-delay-2 {
-    @apply animate-[fadeInUp_0.8s_ease-out_0.4s_forwards];
+    @apply animate-[fadeInUp_1s_ease-out_0.4s_forwards];
+  }
+
+  .glass-header {
+    @apply bg-background/50 backdrop-blur-xl border-b border-foreground/5 transition-all duration-500 hover:bg-background/80;
+  }
+
+  .glass-dark {
+    @apply bg-foreground/95 backdrop-blur-md text-primary-foreground border-border/10;
+  }
+
+  .marquee-container {
+    @apply flex overflow-hidden whitespace-nowrap bg-foreground text-primary-foreground py-4;
+  }
+
+  .marquee-content {
+    @apply flex animate-[marquee_25s_linear_infinite] items-center gap-12 px-6;
+  }
+
+  .editorial-italic {
+    @apply font-heading italic font-light tracking-wide;
+  }
+
+  .metallic-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#BF953F] via-[#FCF6BA] to-[#B38728];
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
   }
 }
 
