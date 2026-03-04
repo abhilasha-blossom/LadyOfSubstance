@@ -126,6 +126,42 @@ const Index = () => {
                     </div>
                 </div>
             </section>
+            {/* Editorial Campaign Gallery */}
+            <section className="bg-background py-20 md:py-40 overflow-hidden">
+                <div className="luxury-container">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-6">
+                        <div>
+                            <p className="luxury-subheading mb-4 tracking-[0.3em]">La Collection</p>
+                            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1]">
+                                The <span className="editorial-italic">Signature</span><br className="hidden md:block" /> Campaign
+                            </h2>
+                        </div>
+                        <Link to="/about" className="group inline-flex items-center gap-4 text-xs tracking-[0.25em] uppercase font-body hover:text-primary transition-colors pb-2 md:pb-4">
+                            <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-500 group-hover:after:origin-bottom-left group-hover:after:scale-x-100 pb-1">View Lookbook</span>
+                            <ArrowRight size={14} className="font-light group-hover:translate-x-1 transition-transform" />
+                        </Link>
+                    </div>
+
+                    {/* Asymmetrical Masonry/Lookbook Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 lg:gap-16">
+                        {/* Image 1 */}
+                        <div className="aspect-[3/4] md:aspect-[2/3] overflow-hidden bg-secondary relative group md:-translate-y-12 lg:-translate-y-24">
+                            <img src="/images/lookbook-1.png" alt="Campaign Look 1" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
+                            <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
+                        </div>
+                        {/* Image 2 */}
+                        <div className="aspect-square md:aspect-[4/5] overflow-hidden bg-secondary relative group mt-4 md:mt-24 lg:mt-32">
+                            <img src="/images/lookbook-2.png" alt="Campaign Look 2" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
+                            <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
+                        </div>
+                        {/* Image 3 */}
+                        <div className="aspect-[3/4] md:aspect-[2/3] overflow-hidden bg-secondary relative group mt-4 md:mt-0 md:translate-y-12 lg:translate-y-20">
+                            <img src="/images/lookbook-3.png" alt="Campaign Look 3" className="w-full h-full object-cover grayscale-[15%] group-hover:grayscale-0 group-hover:scale-[1.05] transition-all duration-[2s] ease-out" loading="lazy" />
+                            <div className="absolute inset-0 bg-background/0 group-hover:bg-foreground/5 transition-colors duration-500" />
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* Brand Story (Deep Contrast) */}
             <section className="bg-foreground text-primary-foreground py-24 md:py-32">
