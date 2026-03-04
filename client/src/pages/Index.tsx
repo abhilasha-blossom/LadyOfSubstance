@@ -40,23 +40,24 @@ const Index = () => {
             {/* Hero */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <div
-                    className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
-                    style={{ backgroundImage: "url('/images/hero.PNG')" }}
+                    className="absolute inset-0 transform scale-105"
+                    style={{ backgroundImage: "url('/images/hero.PNG')", backgroundSize: "cover", backgroundPosition: "center 30%", backgroundAttachment: "fixed" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 12px rgba(255,255,255,0.5)' }}>THE LADY OF SUBSTANCE COLLECTION</p>
+                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.4)' }}>THE LADY OF SUBSTANCE BOUTIQUE</p>
                     <h1
-                        className="font-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground font-light leading-[1.1] mb-10 fade-in-up fade-in-up-delay-1"
-                        style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.7)' }}
+                        className="font-heading text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-tight mb-10 fade-in-up fade-in-up-delay-1"
+                        style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}
                     >
-                        Jewelry for the woman <br /><span className="editorial-italic metallic-text">of substance.</span>
+                        Jewelry for ladies &amp; gentlemen <br /><span className="italic" style={{ color: '#d4af37' }}>of substance.</span>
                     </h1>
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-4 bg-foreground/70 backdrop-blur-md border border-foreground/20 text-primary-foreground px-10 py-4 text-xs tracking-[0.25em] uppercase font-body hover:bg-foreground hover:text-primary transition-all duration-500 fade-in-up fade-in-up-delay-2"
+                        className="inline-flex items-center gap-2 px-8 py-3 text-xs tracking-[0.2em] uppercase font-body hover:opacity-90 transition-opacity fade-in-up fade-in-up-delay-2"
+                        style={{ backgroundColor: '#d4af37', color: '#000' }}
                     >
-                        Explore Collection <ArrowRight size={14} className="font-light" />
+                        Explore Boutique <ArrowRight size={14} />
                     </Link>
                 </div>
             </section>
