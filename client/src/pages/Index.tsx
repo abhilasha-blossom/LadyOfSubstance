@@ -148,7 +148,7 @@ const Index = () => {
                             </Link>
                         </div>
                         <div className="aspect-[3/4] overflow-hidden order-1 md:order-2">
-                            <img src="/images/about.jpg" alt="LadyOfSubstance brand story" className="w-full h-full object-cover hover:scale-[1.05] transition-transform duration-[2s] ease-out opacity-90" loading="lazy" />
+                            <img src="/images/about.jpeg" alt="LadyOfSubstance brand story" className="w-full h-full object-cover hover:scale-[1.05] transition-transform duration-[2s] ease-out opacity-90" loading="lazy" />
                         </div>
                     </div>
                 </div>

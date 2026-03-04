@@ -20,7 +20,7 @@ export default function About() {
                 <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
                     <div className="aspect-[4/5] overflow-hidden bg-secondary">
                         <img
-                            src="/images/about.jpg"
+                            src="/images/about.jpeg"
                             alt="Craftsmanship"
                             className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                         />
