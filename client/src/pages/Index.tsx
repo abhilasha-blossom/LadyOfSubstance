@@ -41,20 +41,20 @@ const Index = () => {
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-fixed transform scale-105"
-                    style={{ backgroundImage: "url('/images/hero.jpg')" }}
+                    style={{ backgroundImage: "url('/images/hero.PNG')" }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/50 to-foreground/20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-foreground/70 via-foreground/30 to-transparent" />
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>THE LADY OF SUBSTANCE COLLECTION</p>
+                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 12px rgba(255,255,255,0.5)' }}>THE LADY OF SUBSTANCE COLLECTION</p>
                     <h1
                         className="font-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground font-light leading-[1.1] mb-10 fade-in-up fade-in-up-delay-1"
-                        style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.9)' }}
+                        style={{ textShadow: '0 2px 24px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.7)' }}
                     >
                         Jewelry for the woman <br /><span className="editorial-italic metallic-text">of substance.</span>
                     </h1>
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-4 bg-primary-foreground/10 backdrop-blur-md border border-primary-foreground/20 text-primary-foreground px-10 py-4 text-xs tracking-[0.25em] uppercase font-body hover:bg-primary-foreground hover:text-foreground transition-all duration-500 fade-in-up fade-in-up-delay-2"
+                        className="inline-flex items-center gap-4 bg-foreground/70 backdrop-blur-md border border-foreground/20 text-primary-foreground px-10 py-4 text-xs tracking-[0.25em] uppercase font-body hover:bg-foreground hover:text-primary transition-all duration-500 fade-in-up fade-in-up-delay-2"
                     >
                         Explore Collection <ArrowRight size={14} className="font-light" />
                     </Link>
