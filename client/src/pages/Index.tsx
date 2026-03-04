@@ -45,7 +45,7 @@ const Index = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/50 to-foreground/20" />
                 <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-                    <p className="luxury-subheading text-primary-foreground mb-6 fade-in-up tracking-[0.3em]">THE LADY OF SUBSTANCE COLLECTION</p>
+                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 12px rgba(0,0,0,0.6)' }}>THE LADY OF SUBSTANCE COLLECTION</p>
                     <h1
                         className="font-heading text-5xl md:text-7xl lg:text-8xl text-primary-foreground font-light leading-[1.1] mb-10 fade-in-up fade-in-up-delay-1"
                         style={{ textShadow: '0 4px 32px rgba(0,0,0,0.7), 0 1px 2px rgba(0,0,0,0.9)' }}
