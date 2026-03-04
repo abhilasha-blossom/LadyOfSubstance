@@ -27,7 +27,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
             </div>
             <h3 className="font-heading text-lg mb-1.5 group-hover:text-primary transition-colors">{product.name}</h3>
-            <p className="text-sm text-muted-foreground font-body tracking-wider">${product.price.toFixed(2)}</p>
+            <p className="text-sm text-muted-foreground font-body tracking-wider">₹{product.price.toLocaleString('en-IN')}</p>
         </Link>
     );
 }

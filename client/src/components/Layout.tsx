@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <div className="min-h-screen flex flex-col font-body selection:bg-primary/20 selection:text-foreground">
             {/* Top Announcement Bar */}
             <div className="bg-foreground text-primary-foreground py-1.5 text-center text-[10px] tracking-[0.3em] font-body uppercase">
-                <span className="opacity-80">Complimentary Worldwide Shipping on orders over $500</span>
+                <span className="opacity-80">Complimentary Nationwide Shipping on orders over ₹500</span>
             </div>
 
             <header className="sticky top-0 z-50 w-full glass-header">
