@@ -4,8 +4,16 @@ import Layout from "@/components/Layout";
 import ProductCard from "@/components/ProductCard";
 import { fetchProducts } from "@/services/api";
 import type { Product } from "@/services/api";
-import { categories } from "@/data/products";
 import { ArrowRight, Loader2 } from "lucide-react";
+
+const categoryData = [
+    { name: "Rings", image: "/images/product-ring.jpg" },
+    { name: "Necklaces", image: "/images/product-necklace.jpg" },
+    { name: "Earrings", image: "/images/product-earrings.jpg" },
+    { name: "Bracelets", image: "/images/product-bracelet.jpg" },
+    { name: "Watches", image: "/images/category-watches.png" },
+    { name: "Bridal", image: "/images/category-bridal.png" }
+];
 
 const Index = () => {
     const [products, setProducts] = useState<Product[]>([]);
@@ -73,15 +81,16 @@ const Index = () => {
                     <div className="luxury-divider mt-4" />
                 </div>
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-4 mt-12">
-                    {categories.map((cat, i) => (
+                    {categoryData.map((cat, i) => (
                         <Link
-                            key={cat}
-                            to="/shop"
+                            key={cat.name}
+                            to={`/shop?category=${cat.name}`}
                             className={`group relative bg-secondary flex items-end p-6 overflow-hidden hover:shadow-2xl transition-all duration-700 ${i % 2 === 0 ? 'aspect-[3/4] md:translate-y-8' : 'aspect-square'}`}
                         >
-                            <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-500" />
-                            <span className="font-heading text-sm md:text-lg tracking-wider group-hover:text-primary transition-colors z-10">
-                                <span className={i % 2 !== 0 ? 'editorial-italic' : ''}>{cat}</span>
+                            <img src={cat.image} alt={cat.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[2s] ease-out opacity-90" loading="lazy" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent group-hover:from-foreground/90 transition-colors duration-500" />
+                            <span className="font-heading text-sm md:text-lg tracking-wider text-primary-foreground group-hover:text-primary transition-colors z-10">
+                                <span className={i % 2 !== 0 ? 'editorial-italic' : ''}>{cat.name}</span>
                             </span>
                         </Link>
                     ))}
