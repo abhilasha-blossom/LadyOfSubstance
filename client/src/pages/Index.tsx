@@ -38,28 +38,40 @@ const Index = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-                {/* Hero image as img tag for reliable rendering */}
+            <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+                {/* Hero image — object-contain shows full necklace */}
                 <img
                     src="/images/hero-banner.png"
                     alt="Lady of Substance hero"
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                    style={{ objectPosition: "center 20%" }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ objectPosition: "center 50%" }}
                 />
-                {/* Soft overlay for text readability */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-black/45" />
-                {/* Hero text */}
-                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
-                    <p className="luxury-subheading metallic-text mb-6 fade-in-up tracking-[0.3em]" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>THE LADY OF SUBSTANCE BOUTIQUE</p>
-                    <h1
-                        className="font-heading text-4xl md:text-6xl lg:text-7xl text-white font-medium leading-tight mb-10 fade-in-up fade-in-up-delay-1"
-                        style={{ textShadow: '0 2px 16px rgba(0,0,0,0.5)' }}
+                {/* Overlay: darker at top and bottom for text contrast, lighter in middle to show jewelry */}
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.5) 100%)' }} />
+                {/* Hero text — centered vertically in viewport */}
+                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+                    <p
+                        className="font-body text-xs md:text-sm tracking-[0.4em] uppercase mb-5 fade-in-up"
+                        style={{ color: '#d4af37', textShadow: '0 1px 8px rgba(0,0,0,0.6)' }}
                     >
-                        Jewelry for ladies &amp; gentlemen <br /><span className="italic" style={{ color: '#d4af37' }}>of substance.</span>
+                        ✦ The Lady of Substance Boutique ✦
+                    </p>
+                    <h1
+                        className="font-heading text-5xl md:text-6xl lg:text-7xl text-white font-medium leading-tight mb-8 fade-in-up fade-in-up-delay-1"
+                        style={{ textShadow: '0 2px 20px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}
+                    >
+                        Jewelry for ladies &amp; gentlemen<br />
+                        <span className="italic" style={{ color: '#d4af37' }}>of substance.</span>
                     </h1>
+                    <p
+                        className="font-body text-white/80 text-sm md:text-base mb-10 max-w-lg mx-auto fade-in-up fade-in-up-delay-1"
+                        style={{ textShadow: '0 1px 6px rgba(0,0,0,0.7)' }}
+                    >
+                        Handcrafted fine jewelry for the woman who knows her worth.
+                    </p>
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-2 px-8 py-3 text-xs tracking-[0.2em] uppercase font-body hover:opacity-90 transition-opacity fade-in-up fade-in-up-delay-2"
+                        className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium hover:opacity-90 transition-all duration-300 fade-in-up fade-in-up-delay-2"
                         style={{ backgroundColor: '#d4af37', color: '#000' }}
                     >
                         Explore Boutique <ArrowRight size={14} />
