@@ -45,59 +45,41 @@ const Index = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: 'center center' }}
                 />
-                {/* Very soft champagne overlay — lets the image breathe */}
-                <div
-                    className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.30) 0%, rgba(248,245,240,0.10) 45%, rgba(248,245,240,0.10) 55%, rgba(248,245,240,0.35) 100%)' }}
-                />
-                {/* Hero text */}
-                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-                    {/* Eyebrow — champagne gold */}
+                {/* No dark overlay needed, text is now dark */}
+                {/* Hero text - shifting slightly up to sit purely in the U-curve without overlapping the diamond */}
+                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-10 pb-16">
+                    {/* Eyebrow — charcoal */}
                     <p
-                        className="font-body text-xs md:text-sm tracking-[0.45em] uppercase mb-6 fade-in-up"
-                        style={{ color: '#C6A75E', letterSpacing: '0.4em' }}
+                        className="font-body text-xs md:text-sm tracking-[0.45em] uppercase mb-5 fade-in-up font-medium"
+                        style={{ color: '#2C2219', letterSpacing: '0.4em' }}
                     >
                         ✦ &nbsp;The Lady of Substance Boutique&nbsp; ✦
                     </p>
-                    {/* Main headline — pearl white */}
+                    {/* Main headline — dark charcoal */}
                     <h1
-                        className="font-heading text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-6 fade-in-up fade-in-up-delay-1"
-                        style={{ color: '#FDFDFD', textShadow: '0 1px 12px rgba(100,80,60,0.5)' }}
+                        className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 fade-in-up fade-in-up-delay-1"
+                        style={{ color: '#2C2219' }}
                     >
                         Jewelry for ladies &amp; gentlemen<br />
-                        <span className="italic" style={{ color: '#C6A75E' }}>of substance.</span>
+                        <span className="italic font-medium" style={{ color: '#C6A75E' }}>of substance.</span>
                     </h1>
-                    {/* Subheadline — warm grey */}
+                    {/* Subheadline — elegant dark espresso */}
                     <p
-                        className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1"
-                        style={{ color: '#E6D3A3', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(60,40,20,0.5)' }}
+                        className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium"
+                        style={{ color: '#4A3728', letterSpacing: '0.04em' }}
                     >
                         Handcrafted fine jewelry for the woman who knows her worth.
                     </p>
-                    {/* CTA button — refined champagne */}
+                    {/* CTA button — dark charcoal to match text */}
                     <Link
                         to="/shop"
                         className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2"
-                        style={{ backgroundColor: '#C6A75E', color: '#FFFFFF' }}
-                        onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#E6D3A3')}
-                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C6A75E')}
+                        style={{ backgroundColor: '#2C2219', color: '#FFFFFF' }}
+                        onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C6A75E')}
+                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#2C2219')}
                     >
                         Explore Boutique <ArrowRight size={14} />
                     </Link>
-                </div>
-
-                {/* Scroll indicator */}
-                <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 fade-in-up fade-in-up-delay-2">
-                    <span className="font-body text-[9px] tracking-[0.35em] uppercase" style={{ color: '#C6A75E' }}>Scroll</span>
-                    <div className="w-[1px] h-10 overflow-hidden" style={{ backgroundColor: 'rgba(198,167,94,0.2)' }}>
-                        <div
-                            className="w-full h-full"
-                            style={{
-                                backgroundColor: '#C6A75E',
-                                animation: 'scrollLine 1.8s ease-in-out infinite'
-                            }}
-                        />
-                    </div>
                 </div>
             </section>
 
