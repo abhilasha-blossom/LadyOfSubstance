@@ -38,13 +38,13 @@ const Index = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="relative h-screen flex items-center overflow-hidden" style={{ backgroundColor: '#F2EBE0' }}>
+            <section className="relative h-screen flex items-center overflow-hidden">
                 {/* Full necklace — object-contain so nothing is cropped */}
                 <img
-                    src="/images/hero-banner.png"
+                    src="/images/hero.PNG"
                     alt="Lady of Substance hero"
-                    className="absolute inset-0 w-full h-full"
-                    style={{ objectFit: 'contain', objectPosition: 'center center' }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    style={{ objectPosition: 'center center' }}
                 />
                 {/* Very soft champagne vignette — preserves image clarity */}
                 <div
