@@ -38,31 +38,31 @@ const Index = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
+            <section className="relative h-[100svh] min-h-[600px] flex items-start md:items-center justify-center overflow-hidden">
                 <img
                     src="/images/hero.png"
                     alt="Lady of Substance hero"
                     className="absolute inset-0 w-full h-full object-cover"
-                    style={{ objectPosition: 'center center' }}
+                    style={{ objectPosition: 'center 80%' }}
                 />
                 {/* Very soft champagne overlay — lets the image breathe */}
                 <div
                     className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.15) 0%, rgba(248,245,240,0.05) 45%, rgba(248,245,240,0.05) 55%, rgba(248,245,240,0.15) 100%)' }}
+                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.2) 0%, rgba(248,245,240,0.05) 40%, rgba(248,245,240,0.0) 60%, rgba(248,245,240,0.15) 100%)' }}
                 />
 
-                {/* Hero text - shifting down to sit perfectly in the wide empty negative space above the necklace */}
-                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-12">
+                {/* Hero text - responsive positioning to stay above the necklace on mobile, centered on desktop */}
+                <div className="relative z-10 text-center px-4 sm:px-6 w-full max-w-5xl mx-auto pt-[20vh] sm:pt-32 md:pt-0 pb-12">
                     {/* Eyebrow — charcoal */}
                     <p
-                        className="font-body text-xs md:text-sm tracking-[0.45em] uppercase mb-5 fade-in-up font-medium"
-                        style={{ color: '#2C2219', letterSpacing: '0.4em' }}
+                        className="font-body text-[10px] sm:text-xs md:text-sm tracking-[0.3em] sm:tracking-[0.45em] uppercase mb-4 sm:mb-5 fade-in-up font-medium"
+                        style={{ color: '#2C2219' }}
                     >
                         ✦ &nbsp;The Lady of Substance Boutique&nbsp; ✦
                     </p>
                     {/* Main headline — dark charcoal */}
                     <h1
-                        className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 fade-in-up fade-in-up-delay-1"
+                        className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-4 sm:mb-6 fade-in-up fade-in-up-delay-1 px-2"
                         style={{ color: '#2C2219', textShadow: '0 1px 12px rgba(248,245,240,0.8)' }}
                     >
                         Jewelry for those<br />
@@ -70,7 +70,7 @@ const Index = () => {
                     </h1>
                     {/* Subheadline — elegant dark espresso */}
                     <p
-                        className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium"
+                        className="font-body text-xs sm:text-sm md:text-base mb-8 sm:mb-10 max-w-xs sm:max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium px-4"
                         style={{ color: '#4A3728', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(248,245,240,0.6)' }}
                     >
                         Handcrafted fine jewelry for those who value timeless elegance.
@@ -78,7 +78,7 @@ const Index = () => {
                     {/* CTA button — metallic champagne gradient */}
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2 shadow-lg hover:shadow-xl"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 py-3 sm:py-4 text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2 shadow-lg hover:shadow-xl"
                         style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
                         onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
                         onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
