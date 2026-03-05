@@ -41,7 +41,7 @@ const Index = () => {
             <section className="relative h-screen flex items-center overflow-hidden">
                 {/* Full necklace — object-contain so nothing is cropped */}
                 <img
-                    src="/images/hero.PNG"
+                    src="/images/hero.png"
                     alt="Lady of Substance hero"
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: 'center center' }}
