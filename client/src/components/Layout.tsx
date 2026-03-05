@@ -57,7 +57,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                         <div className="col-span-1 md:col-span-2">
                             <h3 className="font-heading text-2xl mb-4" style={{ color: '#3E3A36' }}>LADY<span className="editorial-italic" style={{ color: '#C6A75E' }}>OF</span>SUBSTANCE</h3>
                             <p className="font-body text-sm leading-relaxed max-w-sm" style={{ color: '#6B6B6B' }}>
-                                Curating eternal elegance for the modern woman. Discover fine jewelry crafted with intention, designed for a lifetime.
+                                Curating eternal elegance for those who appreciate the extraordinary. Discover fine jewelry crafted with intention, designed for a lifetime.
                             </p>
                         </div>
                         <div>

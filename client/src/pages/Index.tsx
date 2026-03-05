@@ -65,7 +65,7 @@ const Index = () => {
                         className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 fade-in-up fade-in-up-delay-1"
                         style={{ color: '#2C2219', textShadow: '0 1px 12px rgba(248,245,240,0.8)' }}
                     >
-                        Jewelry for ladies &amp; gentlemen<br />
+                        Jewelry for those<br />
                         <span className="italic font-medium" style={{ color: '#C6A75E' }}>of substance.</span>
                     </h1>
                     {/* Subheadline — elegant dark espresso */}
@@ -73,7 +73,7 @@ const Index = () => {
                         className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium"
                         style={{ color: '#4A3728', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(248,245,240,0.6)' }}
                     >
-                        Handcrafted fine jewelry for the woman who knows her worth.
+                        Handcrafted fine jewelry for those who value timeless elegance.
                     </p>
                     {/* CTA button — metallic champagne gradient */}
                     <Link
@@ -208,12 +208,12 @@ const Index = () => {
                         <div className="max-w-xl order-2 md:order-1">
                             <p className="luxury-subheading mb-4 opacity-70">Heritage & Vision</p>
                             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.1] font-light">
-                                Crafted for the woman who <br /><span className="editorial-italic metallic-text">knows her worth.</span>
+                                Crafted for those who <br /><span className="editorial-italic metallic-text">value true elegance.</span>
                             </h2>
                             <div className="h-[1px] w-24 mb-8" style={{ backgroundColor: '#C6A75E' }} />
                             <p className="font-body leading-relaxed mb-10 text-lg" style={{ color: '#6B6B6B' }}>
                                 LadyOfSubstance was born from the belief that jewelry should be more than decoration — it should be a declaration.
-                                Every piece is designed for women who lead with confidence, choose quality over quantity, and understand that
+                                Every piece is designed for individuals who lead with confidence, choose quality over quantity, and understand that
                                 true luxury is found in the details.
                             </p>
                             <Link to="/about" className="group inline-flex items-center gap-4 text-xs tracking-[0.25em] uppercase font-body hover:text-primary transition-colors text-foreground">

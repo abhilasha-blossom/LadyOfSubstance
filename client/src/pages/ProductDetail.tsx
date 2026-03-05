@@ -83,7 +83,7 @@ export default function ProductDetail() {
                         <div className="luxury-divider ml-0 mb-8" />
 
                         <p className="font-body text-muted-foreground leading-relaxed mb-10">
-                            {product.description || "An exquisite piece crafted with the finest attention to detail. Designed for the woman who appreciates true luxury."}
+                            {product.description || "An exquisite piece crafted with the finest attention to detail. Designed to complement any style."}
                         </p>
 
                         <button

@@ -32,7 +32,7 @@ async function main() {
         {
             name: "Gold Hoop Earrings",
             slug: "gold-hoop-earrings",
-            description: "Minimalist and chic, these solid gold hoops are a staple for every woman.",
+            description: "Minimalist and chic, these solid gold hoops are a staple for any collection.",
             price: 150.00,
             category: "earrings",
             images: ["/images/product-earrings.jpg"],
