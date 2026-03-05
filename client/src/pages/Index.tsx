@@ -38,69 +38,52 @@ const Index = () => {
     return (
         <Layout>
             {/* Hero */}
-            <section className="relative h-screen flex items-center overflow-hidden">
-                {/* Full necklace — object-contain so nothing is cropped */}
+            <section className="relative h-screen flex items-center justify-center overflow-hidden">
                 <img
                     src="/images/hero.png"
                     alt="Lady of Substance hero"
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: 'center center' }}
                 />
-                {/* Very soft champagne vignette — preserves image clarity */}
+                {/* Very soft champagne overlay — lets the image breathe */}
                 <div
                     className="absolute inset-0"
-                    style={{ background: 'linear-gradient(105deg, rgba(242,235,224,0.72) 0%, rgba(242,235,224,0.25) 50%, rgba(242,235,224,0.10) 100%)' }}
+                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.30) 0%, rgba(248,245,240,0.10) 45%, rgba(248,245,240,0.10) 55%, rgba(248,245,240,0.35) 100%)' }}
                 />
-
-                {/* Left-aligned editorial text */}
-                <div className="relative z-10 px-8 md:px-20 lg:px-32 max-w-2xl">
-                    {/* Thin vertical rule + eyebrow */}
-                    <div className="flex items-center gap-4 mb-8 fade-in-up">
-                        <div className="w-8 h-[1px]" style={{ backgroundColor: '#C6A75E' }} />
-                        <p className="font-body text-[10px] md:text-xs tracking-[0.45em] uppercase" style={{ color: '#C6A75E' }}>
-                            The Lady of Substance Boutique
-                        </p>
-                    </div>
-
-                    {/* Main heading */}
-                    <h1
-                        className="font-heading text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.15] mb-6 fade-in-up fade-in-up-delay-1"
-                        style={{ color: '#2C2219' }}
+                {/* Hero text */}
+                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
+                    {/* Eyebrow — champagne gold */}
+                    <p
+                        className="font-body text-xs md:text-sm tracking-[0.45em] uppercase mb-6 fade-in-up"
+                        style={{ color: '#C6A75E', letterSpacing: '0.4em' }}
                     >
-                        Jewelry for<br />
-                        ladies &amp; gentlemen<br />
+                        ✦ &nbsp;The Lady of Substance Boutique&nbsp; ✦
+                    </p>
+                    {/* Main headline — pearl white */}
+                    <h1
+                        className="font-heading text-5xl md:text-6xl lg:text-7xl font-medium leading-tight mb-6 fade-in-up fade-in-up-delay-1"
+                        style={{ color: '#FDFDFD', textShadow: '0 1px 12px rgba(100,80,60,0.5)' }}
+                    >
+                        Jewelry for ladies &amp; gentlemen<br />
                         <span className="italic" style={{ color: '#C6A75E' }}>of substance.</span>
                     </h1>
-
-                    {/* Tagline — dark enough to read on the light side */}
+                    {/* Subheadline — warm grey */}
                     <p
-                        className="font-body text-sm md:text-base mb-10 max-w-sm leading-relaxed fade-in-up fade-in-up-delay-1"
-                        style={{ color: '#4A3728', letterSpacing: '0.03em' }}
+                        className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1"
+                        style={{ color: '#E6D3A3', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(60,40,20,0.5)' }}
                     >
                         Handcrafted fine jewelry for the woman who knows her worth.
                     </p>
-
-                    {/* CTA */}
-                    <div className="flex items-center gap-6 fade-in-up fade-in-up-delay-2">
-                        <Link
-                            to="/shop"
-                            className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-300"
-                            style={{ backgroundColor: '#C6A75E', color: '#FFFFFF' }}
-                            onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#B8966A')}
-                            onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C6A75E')}
-                        >
-                            Explore Boutique <ArrowRight size={13} />
-                        </Link>
-                        <Link
-                            to="/about"
-                            className="text-xs tracking-[0.2em] uppercase font-body transition-colors duration-300 pb-0.5"
-                            style={{ color: '#4A3728', borderBottom: '1px solid #C6A75E' }}
-                            onMouseEnter={e => e.currentTarget.style.color = '#C6A75E'}
-                            onMouseLeave={e => e.currentTarget.style.color = '#4A3728'}
-                        >
-                            Our Story
-                        </Link>
-                    </div>
+                    {/* CTA button — refined champagne */}
+                    <Link
+                        to="/shop"
+                        className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2"
+                        style={{ backgroundColor: '#C6A75E', color: '#FFFFFF' }}
+                        onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#E6D3A3')}
+                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#C6A75E')}
+                    >
+                        Explore Boutique <ArrowRight size={14} />
+                    </Link>
                 </div>
 
                 {/* Scroll indicator */}
