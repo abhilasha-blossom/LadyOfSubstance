@@ -45,9 +45,14 @@ const Index = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: 'center center' }}
                 />
-                {/* No dark overlay needed, text is now dark */}
-                {/* Hero text - shifting slightly up to sit purely in the U-curve without overlapping the diamond */}
-                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-10 pb-16">
+                {/* Very soft champagne overlay — lets the image breathe */}
+                <div
+                    className="absolute inset-0"
+                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.15) 0%, rgba(248,245,240,0.05) 45%, rgba(248,245,240,0.05) 55%, rgba(248,245,240,0.15) 100%)' }}
+                />
+
+                {/* Hero text - shifting down to sit perfectly in the wide empty negative space above the necklace */}
+                <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 pb-12">
                     {/* Eyebrow — charcoal */}
                     <p
                         className="font-body text-xs md:text-sm tracking-[0.45em] uppercase mb-5 fade-in-up font-medium"
@@ -58,7 +63,7 @@ const Index = () => {
                     {/* Main headline — dark charcoal */}
                     <h1
                         className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 fade-in-up fade-in-up-delay-1"
-                        style={{ color: '#2C2219' }}
+                        style={{ color: '#2C2219', textShadow: '0 1px 12px rgba(248,245,240,0.8)' }}
                     >
                         Jewelry for ladies &amp; gentlemen<br />
                         <span className="italic font-medium" style={{ color: '#C6A75E' }}>of substance.</span>
@@ -66,7 +71,7 @@ const Index = () => {
                     {/* Subheadline — elegant dark espresso */}
                     <p
                         className="font-body text-sm md:text-base mb-10 max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium"
-                        style={{ color: '#4A3728', letterSpacing: '0.04em' }}
+                        style={{ color: '#4A3728', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(248,245,240,0.6)' }}
                     >
                         Handcrafted fine jewelry for the woman who knows her worth.
                     </p>
