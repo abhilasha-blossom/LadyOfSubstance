@@ -65,7 +65,10 @@ export default function About() {
                 <div className="text-center">
                     <Link
                         to="/shop"
-                        className="bg-foreground text-primary-foreground px-10 py-4 text-xs tracking-[0.2em] uppercase font-body hover:bg-primary hover:text-foreground transition-colors inline-flex items-center gap-2"
+                        className="px-10 py-4 text-xs tracking-[0.2em] uppercase font-body inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                        style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                        onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
+                        onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
                     >
                         Explore The Collections <ArrowRight size={14} />
                     </Link>

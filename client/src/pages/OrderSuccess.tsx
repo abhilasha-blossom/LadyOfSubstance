@@ -32,7 +32,13 @@ export default function OrderSuccess() {
                     </div>
                 </div>
 
-                <Link to="/shop" className="bg-foreground text-primary-foreground py-4 px-12 text-xs tracking-[0.2em] uppercase font-body hover:bg-primary hover:text-foreground transition-colors inline-flex items-center gap-2">
+                <Link
+                    to="/shop"
+                    className="py-4 px-12 text-xs tracking-[0.2em] uppercase font-body inline-flex items-center gap-2 shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                    style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                >
                     Continue Shopping <ArrowRight size={14} />
                 </Link>
             </div>

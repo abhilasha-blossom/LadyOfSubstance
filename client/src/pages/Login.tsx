@@ -86,7 +86,10 @@ export default function Login() {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full bg-foreground text-primary-foreground py-4 text-xs tracking-[0.2em] uppercase font-body hover:bg-primary hover:text-foreground transition-colors mt-4 flex justify-center items-center gap-2 disabled:opacity-50"
+                            className="w-full py-4 text-xs tracking-[0.2em] uppercase font-body mt-4 flex justify-center items-center gap-2 disabled:opacity-50 shadow-md hover:shadow-lg transition-all duration-300 font-medium cursor-pointer"
+                            style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                            onMouseEnter={e => { if (!loading) e.currentTarget.style.opacity = '0.9'; }}
+                            onMouseLeave={e => { if (!loading) e.currentTarget.style.opacity = '1'; }}
                         >
                             {loading && <Loader2 size={16} className="animate-spin" />}
                             {loading ? "Signing In..." : "Sign In"}
@@ -95,7 +98,7 @@ export default function Login() {
 
                     <div className="mt-8 text-center text-sm font-body text-muted-foreground">
                         Don't have an account?{" "}
-                        <Link to="/register" className="text-foreground hover:text-primary transition-colors underline underline-offset-4">
+                        <Link to="/register" className="transition-colors underline underline-offset-4" style={{ color: '#C6A75E' }} onMouseEnter={e => e.currentTarget.style.color = '#B8966A'} onMouseLeave={e => e.currentTarget.style.color = '#C6A75E'}>
                             Create one
                         </Link>
                     </div>

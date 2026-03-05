@@ -17,7 +17,10 @@ export default function Cart() {
                     </p>
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-2 bg-foreground text-primary-foreground px-8 py-3 text-xs tracking-[0.2em] uppercase font-body hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center gap-2 px-8 py-3 text-xs tracking-[0.2em] uppercase font-body shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                        style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                        onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
+                        onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
                     >
                         Explore Collection
                     </Link>
@@ -115,7 +118,13 @@ export default function Cart() {
                             <span>${getCartTotal().toFixed(2)}</span>
                         </div>
 
-                        <Link to="/checkout" className="w-full bg-foreground text-primary-foreground py-4 text-xs tracking-[0.2em] uppercase font-body hover:bg-primary hover:text-foreground transition-colors flex justify-center items-center">
+                        <Link
+                            to="/checkout"
+                            className="w-full py-4 text-xs tracking-[0.2em] uppercase font-body flex justify-center items-center shadow-md hover:shadow-lg transition-all duration-300 font-medium"
+                            style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                            onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
+                            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                        >
                             Proceed to Checkout
                         </Link>
 

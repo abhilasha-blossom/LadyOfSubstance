@@ -188,7 +188,10 @@ export default function Checkout() {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full bg-foreground text-primary-foreground py-4 text-xs tracking-[0.2em] uppercase font-body hover:bg-primary hover:text-foreground transition-colors mt-8 flex justify-center items-center gap-2 disabled:opacity-50"
+                                className="w-full py-4 text-xs tracking-[0.2em] uppercase font-body mt-8 flex justify-center items-center gap-2 disabled:opacity-50 shadow-md hover:shadow-lg transition-all duration-300 font-medium cursor-pointer"
+                                style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                                onMouseEnter={e => { if (!loading) e.currentTarget.style.opacity = '0.9'; }}
+                                onMouseLeave={e => { if (!loading) e.currentTarget.style.opacity = '1'; }}
                             >
                                 {loading && <Loader2 size={16} className="animate-spin" />}
                                 {loading ? "Processing..." : "Place Order & Pay"}
@@ -212,7 +215,7 @@ export default function Checkout() {
                                                     <div className="w-full h-full text-[10px] flex items-center justify-center text-muted-foreground">No img</div>
                                                 )}
                                             </div>
-                                            <span className="absolute -top-2 -right-2 w-5 h-5 bg-foreground text-primary-foreground rounded-full flex items-center justify-center text-[10px]">
+                                            <span className="absolute -top-2 -right-2 w-5 h-5 rounded-full flex items-center justify-center text-[10px]" style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}>
                                                 {item.quantity}
                                             </span>
                                         </div>

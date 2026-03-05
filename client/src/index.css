@@ -4,69 +4,46 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    /* Cream */
-    --foreground: 20 10% 10%;
-    /* Dark Charcoal */
+    /* Ivory background: #F8F5F0 */
+    --background: 40 33% 96%;
+    /* Warm charcoal heading/text: #3E3A36 */
+    --foreground: 30 7% 23%;
 
-    --card: 40 33% 98%;
-    --card-foreground: 20 10% 10%;
+    /* Cards same as background for minimal look */
+    --card: 40 33% 96%;
+    --card-foreground: 30 7% 23%;
 
-    --popover: 40 33% 98%;
-    --popover-foreground: 20 10% 10%;
+    --popover: 40 33% 96%;
+    --popover-foreground: 30 7% 23%;
 
-    --primary: 45 40% 50%;
-    /* Gold/Champagne */
-    --primary-foreground: 0 0% 100%;
+    /* Primary champagne gold: #C6A75E */
+    --primary: 42 46% 57%;
+    /* Pearl white text on primary: #FDFDFD */
+    --primary-foreground: 0 0% 99%;
 
-    --secondary: 40 10% 90%;
-    /* Beige */
-    --secondary-foreground: 20 10% 10%;
+    /* Light champagne background section: #F2EADF */
+    --secondary: 35 35% 91%;
+    /* Soft warm neutral text: #6B6B6B */
+    --secondary-foreground: 0 0% 42%;
 
-    --muted: 40 10% 90%;
-    --muted-foreground: 20 5% 40%;
+    /* Muted same as secondary for subtle sections */
+    --muted: 35 35% 91%;
+    /* Soft warm neutral text: #6B6B6B */
+    --muted-foreground: 0 0% 42%;
 
-    --accent: 45 40% 50%;
-    --accent-foreground: 0 0% 100%;
+    /* Soft rose gold accent: #E6B7A9 */
+    --accent: 14 58% 78%;
+    --accent-foreground: 0 0% 99%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 10% 90%;
-    --input: 40 10% 90%;
-    --ring: 45 40% 50%;
+    --border: 35 35% 91%;
+    --input: 35 35% 91%;
+    /* Ring matches primary champagne gold */
+    --ring: 42 46% 57%;
 
     --radius: 0rem;
-  }
-
-  .dark {
-    --background: 20 14.3% 4.1%;
-    --foreground: 0 0% 95%;
-
-    --card: 20 14.3% 4.1%;
-    --card-foreground: 0 0% 95%;
-
-    --popover: 20 14.3% 4.1%;
-    --popover-foreground: 0 0% 95%;
-
-    --primary: 45 40% 50%;
-    --primary-foreground: 0 0% 98%;
-
-    --secondary: 20 10% 15%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 20 10% 15%;
-    --muted-foreground: 20 10% 60%;
-
-    --accent: 45 40% 50%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 20 10% 15%;
-    --input: 20 10% 15%;
-    --ring: 45 40% 50%;
   }
 }
 

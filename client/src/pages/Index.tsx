@@ -75,13 +75,13 @@ const Index = () => {
                     >
                         Handcrafted fine jewelry for the woman who knows her worth.
                     </p>
-                    {/* CTA button — dark charcoal to match text */}
+                    {/* CTA button — metallic champagne gradient */}
                     <Link
                         to="/shop"
-                        className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2"
-                        style={{ backgroundColor: '#2C2219', color: '#FFFFFF' }}
-                        onMouseEnter={e => (e.currentTarget.style.backgroundColor = '#C6A75E')}
-                        onMouseLeave={e => (e.currentTarget.style.backgroundColor = '#2C2219')}
+                        className="inline-flex items-center gap-3 px-10 py-4 text-xs tracking-[0.25em] uppercase font-body font-medium transition-all duration-400 fade-in-up fade-in-up-delay-2 shadow-lg hover:shadow-xl"
+                        style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }}
+                        onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')}
+                        onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
                     >
                         Explore Boutique <ArrowRight size={14} />
                     </Link>
@@ -201,8 +201,8 @@ const Index = () => {
                 </div>
             </section>
 
-            {/* Brand Story (Deep Contrast) */}
-            <section className="bg-foreground text-primary-foreground py-24 md:py-32">
+            {/* Brand Story (Light Luxury Tone) */}
+            <section className="bg-secondary/40 text-foreground py-24 md:py-32">
                 <div className="luxury-container">
                     <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
                         <div className="max-w-xl order-2 md:order-1">
@@ -210,18 +210,18 @@ const Index = () => {
                             <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-8 leading-[1.1] font-light">
                                 Crafted for the woman who <br /><span className="editorial-italic metallic-text">knows her worth.</span>
                             </h2>
-                            <div className="h-[1px] w-24 bg-white/20 mb-8" />
-                            <p className="text-primary-foreground/60 font-body leading-relaxed mb-10 text-lg">
+                            <div className="h-[1px] w-24 mb-8" style={{ backgroundColor: '#C6A75E' }} />
+                            <p className="font-body leading-relaxed mb-10 text-lg" style={{ color: '#6B6B6B' }}>
                                 LadyOfSubstance was born from the belief that jewelry should be more than decoration — it should be a declaration.
                                 Every piece is designed for women who lead with confidence, choose quality over quantity, and understand that
                                 true luxury is found in the details.
                             </p>
-                            <Link to="/about" className="group inline-flex items-center gap-4 text-xs tracking-[0.25em] uppercase font-body hover:text-primary transition-colors">
+                            <Link to="/about" className="group inline-flex items-center gap-4 text-xs tracking-[0.25em] uppercase font-body hover:text-primary transition-colors text-foreground">
                                 <span className="relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-500 group-hover:after:origin-bottom-left group-hover:after:scale-x-100 pb-1">Read The Full Story</span>
                                 <ArrowRight size={14} className="font-light group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </div>
-                        <div className="aspect-[3/4] overflow-hidden order-1 md:order-2">
+                        <div className="aspect-[3/4] overflow-hidden order-1 md:order-2 bg-background p-4 shadow-sm">
                             <img src="/images/about.jpeg" alt="LadyOfSubstance brand story" className="w-full h-full object-cover hover:scale-[1.05] transition-transform duration-[2s] ease-out opacity-90" loading="lazy" />
                         </div>
                     </div>
@@ -240,9 +240,9 @@ const Index = () => {
                         <input
                             type="email"
                             placeholder="Email Address"
-                            className="flex-1 bg-transparent border-b border-border px-4 py-4 text-sm font-body focus:outline-none focus:border-primary transition-colors"
+                            className="flex-1 bg-transparent border-b border-border px-4 py-4 text-sm font-body focus:outline-none focus:border-primary transition-colors text-foreground placeholder:text-muted-foreground"
                         />
-                        <button className="bg-foreground text-primary-foreground px-8 py-4 text-xs font-body tracking-[0.2em] uppercase hover:bg-primary transition-colors">
+                        <button className="px-8 py-4 text-xs font-body tracking-[0.2em] uppercase transition-all duration-300 shadow-md hover:shadow-lg" style={{ background: 'linear-gradient(135deg, #C6A75E, #E6D3A3)', color: '#FDFDFD' }} onMouseEnter={e => (e.currentTarget.style.opacity = '0.9')} onMouseLeave={e => (e.currentTarget.style.opacity = '1')}>
                             Subscribe
                         </button>
                     </div>
