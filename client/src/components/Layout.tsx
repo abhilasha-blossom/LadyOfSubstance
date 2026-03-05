@@ -17,33 +17,33 @@ export default function Layout({ children }: { children: ReactNode }) {
     return (
         <div className="min-h-screen flex flex-col font-body selection:bg-primary/20 selection:text-foreground">
             {/* Top Announcement Bar */}
-            <div className="bg-foreground text-primary-foreground py-1.5 text-center text-[10px] tracking-[0.3em] font-body uppercase">
+            <div className="bg-foreground text-primary-foreground py-1.5 text-center text-[10px] tracking-[0.3em] font-body uppercase relative z-50">
                 <span className="opacity-80">Complimentary Nationwide Shipping on orders over ₹500</span>
             </div>
 
-            <header className="sticky top-0 z-50 w-full glass-header">
+            <header className="absolute top-8 left-0 right-0 z-50 w-full">
                 <div className="luxury-container flex h-20 items-center justify-between">
-                    <Link to="/" className="font-heading text-2xl font-medium tracking-widest text-foreground flex items-center gap-2 group">
-                        <span className="opacity-90 transition-opacity group-hover:opacity-100">LADY<span className="editorial-italic text-primary">OF</span>SUBSTANCE</span>
+                    <Link to="/" className="font-heading text-2xl font-medium tracking-widest flex items-center gap-2 group" style={{ color: '#FDFDFD' }}>
+                        <span className="transition-opacity group-hover:opacity-80">LADY<span className="editorial-italic" style={{ color: '#C6A75E' }}>OF</span>SUBSTANCE</span>
                     </Link>
                     <nav className="hidden md:flex items-center gap-6">
-                        <Link to="/shop" className="text-sm tracking-widest hover:text-primary transition-colors">SHOP</Link>
-                        <Link to="/about" className="text-sm tracking-widest hover:text-primary transition-colors">OUR STORY</Link>
-                        <Link to="/cart" className="text-sm tracking-widest hover:text-primary transition-colors relative flex items-center">
+                        <Link to="/shop" className="text-sm tracking-widest transition-colors" style={{ color: '#FDFDFD' }} onMouseEnter={e => e.currentTarget.style.color = '#C6A75E'} onMouseLeave={e => e.currentTarget.style.color = '#FDFDFD'}>SHOP</Link>
+                        <Link to="/about" className="text-sm tracking-widest transition-colors" style={{ color: '#FDFDFD' }} onMouseEnter={e => e.currentTarget.style.color = '#C6A75E'} onMouseLeave={e => e.currentTarget.style.color = '#FDFDFD'}>OUR STORY</Link>
+                        <Link to="/cart" className="text-sm tracking-widest transition-colors relative flex items-center" style={{ color: '#FDFDFD' }} onMouseEnter={e => e.currentTarget.style.color = '#C6A75E'} onMouseLeave={e => e.currentTarget.style.color = '#FDFDFD'}>
                             CART
                             {cartCount > 0 && (
-                                <span className="absolute -top-2 -right-3 bg-primary text-primary-foreground text-[10px] w-4 h-4 flex items-center justify-center rounded-full">
+                                <span className="absolute -top-2 -right-3 text-[10px] w-4 h-4 flex items-center justify-center rounded-full" style={{ backgroundColor: '#C6A75E', color: '#fff' }}>
                                     {cartCount}
                                 </span>
                             )}
                         </Link>
                         {isAuthenticated ? (
                             <>
-                                <Link to="/account" className="text-sm tracking-widest hover:text-primary transition-colors">ACCOUNT</Link>
-                                <button onClick={handleLogout} className="text-sm tracking-widest hover:text-primary transition-colors">LOGOUT</button>
+                                <Link to="/account" className="text-sm tracking-widest transition-colors" style={{ color: '#FDFDFD' }}>ACCOUNT</Link>
+                                <button onClick={handleLogout} className="text-sm tracking-widest transition-colors" style={{ color: '#FDFDFD' }}>LOGOUT</button>
                             </>
                         ) : (
-                            <Link to="/login" className="text-sm tracking-widest hover:text-primary transition-colors bg-foreground text-primary-foreground px-4 py-2 hover:bg-primary hover:text-foreground">LOGIN</Link>
+                            <Link to="/login" className="text-sm tracking-widest px-5 py-2 transition-all duration-300" style={{ border: '1px solid rgba(253,253,253,0.5)', color: '#FDFDFD' }} onMouseEnter={e => { e.currentTarget.style.backgroundColor = '#C6A75E'; e.currentTarget.style.borderColor = '#C6A75E'; }} onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent'; e.currentTarget.style.borderColor = 'rgba(253,253,253,0.5)'; }}>LOGIN</Link>
                         )}
                     </nav>
                 </div>
