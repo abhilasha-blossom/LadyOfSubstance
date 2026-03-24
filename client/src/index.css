@@ -95,7 +95,7 @@
   }
 
   .marquee-container {
-    @apply flex overflow-hidden whitespace-nowrap bg-foreground text-primary-foreground py-4;
+    @apply flex overflow-hidden whitespace-nowrap bg-secondary py-4;
   }
 
   .marquee-content {

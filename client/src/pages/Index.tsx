@@ -90,7 +90,7 @@ const Index = () => {
 
             {/* Shimmering Marquee */}
             <div className="marquee-container">
-                <div className="marquee-content luxury-subheading text-[10px] md:text-xs tracking-[0.3em] opacity-80">
+                <div className="marquee-content font-body text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-90" style={{ color: '#4A3728' }}>
                     <span>✧ ETHICALLY SOURCED ✧</span>
                     <span>BESPOKE CRAFTSMANSHIP ✧</span>
                     <span>ETERNAL ELEGANCE ✧</span>

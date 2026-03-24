@@ -90,7 +90,7 @@ export const getOrderById = async (req: AuthRequest, res: Response) => {
         const role = req.user!.role;
 
         const order = await prisma.order.findUnique({
-            where: { id: req.params.id },
+            where: { id: req.params.id as string },
             include: {
                 items: { include: { product: true } },
                 user: { select: { name: true, email: true } }
@@ -119,7 +119,7 @@ export const updateOrderStatus = async (req: AuthRequest, res: Response) => {
         }
 
         const order = await prisma.order.update({
-            where: { id: req.params.id },
+            where: { id: req.params.id as string },
             data: { orderStatus: status },
         });
 

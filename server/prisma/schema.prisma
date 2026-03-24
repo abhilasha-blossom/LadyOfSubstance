@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model User {
@@ -29,7 +29,7 @@ model Product {
   description String
   price       Float
   category    String
-  images      String[]
+  images      Json
   stock       Int      @default(0)
   bestseller  Boolean  @default(false)
   createdAt   DateTime @default(now())
@@ -45,6 +45,7 @@ model Order {
   orderStatus   String      @default("PROCESSING")
   createdAt     DateTime    @default(now())
   items         OrderItem[]
+  razorpayId    String?
 }
 
 model OrderItem {
