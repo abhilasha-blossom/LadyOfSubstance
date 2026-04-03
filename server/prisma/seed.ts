@@ -48,6 +48,26 @@ async function main() {
             images: ["/images/product-bracelet.jpg"],
             stock: 45,
             bestseller: true,
+        },
+        {
+            name: "Radiant Teardrop Diamond Necklace",
+            slug: "teardrop-diamond-necklace",
+            description: "An elegant diamond studded necklace featuring a captivating teardrop centerpiece, perfect for modern sensibilities.",
+            price: 1500.00,
+            category: "necklaces",
+            images: ["/images/diamond-necklace-1.jpg", "/images/diamond-necklace-2.jpg"],
+            stock: 12,
+            bestseller: true,
+        },
+        {
+            name: "Kundan Heritage Bridal Necklace",
+            slug: "kundan-heritage-necklace",
+            description: "A traditional Indian Kundan masterpiece complete with intricate goldwork and rich ruby accents.",
+            price: 2200.00,
+            category: "necklaces",
+            images: ["/images/indian-necklace-1.jpg", "/images/indian-necklace-2.jpg", "/images/indian-necklace-3.jpg"],
+            stock: 5,
+            bestseller: true,
         }
     ];
 

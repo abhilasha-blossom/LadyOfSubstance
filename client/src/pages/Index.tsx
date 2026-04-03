@@ -45,10 +45,10 @@ const Index = () => {
                     className="absolute inset-0 w-full h-full object-cover"
                     style={{ objectPosition: 'center 80%' }}
                 />
-                {/* Very soft champagne overlay — lets the image breathe */}
+                {/* Enhanced champagne overlay for better text readability */}
                 <div
                     className="absolute inset-0"
-                    style={{ background: 'linear-gradient(to bottom, rgba(248,245,240,0.2) 0%, rgba(248,245,240,0.05) 40%, rgba(248,245,240,0.0) 60%, rgba(248,245,240,0.15) 100%)' }}
+                    style={{ background: 'radial-gradient(circle at center, rgba(248,245,240,0.6) 0%, rgba(248,245,240,0.2) 40%, rgba(248,245,240,0.0) 100%)' }}
                 />
 
                 {/* Hero text - responsive positioning to stay above the necklace on mobile, centered on desktop */}
@@ -71,7 +71,7 @@ const Index = () => {
                     {/* Subheadline — elegant dark espresso */}
                     <p
                         className="font-body text-xs sm:text-sm md:text-base mb-8 sm:mb-10 max-w-xs sm:max-w-md mx-auto fade-in-up fade-in-up-delay-1 font-medium px-4"
-                        style={{ color: '#4A3728', letterSpacing: '0.04em', textShadow: '0 1px 6px rgba(248,245,240,0.6)' }}
+                        style={{ color: '#2C2219', letterSpacing: '0.04em', textShadow: '0 1px 4px rgba(255,255,255,0.9), 0 2px 12px rgba(248,245,240,0.9)' }}
                     >
                         Handcrafted fine jewelry for those who value timeless elegance.
                     </p>

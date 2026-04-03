@@ -9,6 +9,7 @@ import { Loader2, ArrowLeft } from "lucide-react";
 export default function ProductDetail() {
     const { slug } = useParams<{ slug: string }>();
     const [product, setProduct] = useState<Product | null>(null);
+    const [activeImage, setActiveImage] = useState<string>('');
     const [loading, setLoading] = useState(true);
     const { addToCart } = useCart();
 
@@ -19,6 +20,9 @@ export default function ProductDetail() {
             try {
                 const data = await fetchProductBySlug(slug);
                 setProduct(data);
+                if (data.images && data.images.length > 0) {
+                    setActiveImage(data.images[0]);
+                }
             } catch (error) {
                 console.error("Error loading product", error);
             } finally {
@@ -61,17 +65,35 @@ export default function ProductDetail() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
-                    {/* Images */}
-                    <div className="bg-secondary/30 aspect-[4/5] flex items-center justify-center relative overflow-hidden">
-                        {product.images && product.images.length > 0 ? (
-                            <img
-                                src={product.images[0]}
-                                alt={product.name}
-                                className="w-full h-full object-cover"
-                            />
-                        ) : (
-                            <div className="text-muted-foreground font-body">No Image Available</div>
+                    {/* Images Gallery */}
+                    <div className="flex flex-col-reverse md:flex-row gap-4">
+                        {/* Thumbnails */}
+                        {product.images && product.images.length > 1 && (
+                            <div className="flex md:flex-col gap-3 overflow-x-auto md:w-20 lg:w-24 shrink-0 pb-2 md:pb-0 scrollbar-hide pt-2 md:pt-0">
+                                {product.images.map((img, idx) => (
+                                    <button
+                                        key={idx}
+                                        onClick={() => setActiveImage(img)}
+                                        className={`w-16 h-20 md:w-full md:h-24 lg:h-28 shrink-0 overflow-hidden border transition-all duration-300 ${activeImage === img ? 'border-primary opacity-100 ring-1 ring-primary/50' : 'border-transparent opacity-60 hover:opacity-100'}`}
+                                    >
+                                        <img src={img} alt={`${product.name} view ${idx + 1}`} className="w-full h-full object-cover" />
+                                    </button>
+                                ))}
+                            </div>
                         )}
+                        
+                        {/* Main Image */}
+                        <div className="bg-secondary/30 w-full aspect-[4/5] md:aspect-auto md:h-[600px] flex items-center justify-center relative overflow-hidden flex-1 group">
+                            {product.images && product.images.length > 0 ? (
+                                <img
+                                    src={activeImage || product.images[0]}
+                                    alt={product.name}
+                                    className="w-full h-full object-cover transition-opacity duration-300"
+                                />
+                            ) : (
+                                <div className="text-muted-foreground font-body">No Image Available</div>
+                            )}
+                        </div>
                     </div>
 
                     {/* Details */}
